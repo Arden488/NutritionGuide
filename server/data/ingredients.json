@@ -1,0 +1,14 @@
+{
+  "ingredients": [
+    {
+      "id": 1,
+      "title": "Porridge",
+      "measure_unit": "gram"
+    },
+    {
+      "id": 2,
+      "title": "Milk",
+      "measure_unit": "litres"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "days": [
+    {
+      "id": 1,
+      "title": "Monday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 2,
+      "title": "Tuesday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 3,
+      "title": "Wednesday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 4,
+      "title": "Thursday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 5,
+      "title": "Friday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 6,
+      "title": "Saturday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    },
+    {
+      "id": 7,
+      "title": "Sunday",
+      "breakfast_rec_id": null,
+      "lunch_rec_id": null,
+      "dinner_rec_id": null,
+      "supper_rec_id": null 
+    }
+  ]
+}
