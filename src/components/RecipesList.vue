@@ -22,23 +22,53 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+function collectData(data) {
+  let newIngrArray = [];
+
+  data.forEach((element, index, array) => {
+    const promises = [];
+  
+    element.ingredients.forEach(i => {
+      promises.push(
+        axios.get(`http://localhost:3000/ingredients/${i.id}`)
+      );
+    });
+
+    axios.all(promises).then(response => {
+      response.forEach(el => {
+        let amount = 0;
+        let ingredientData;
+
+        element.ingredients.forEach(e => {
+          if(e.id === el.data.id) 
+            ingredientData = e;
+        });
+        
+        newIngrArray.push(`${el.data.title} (${ingredientData.amount} ${el.data.measure_unit})`);
+      });
+
+      array[index].ingredients = newIngrArray.join(', ');
+    })
+  });
+
+  return data;
+}
+
 export default {
   data() {
     return {
-      tableData: [{
-        id: '1',
-        title: 'Spaghetti',
-        ingredients: 'One, two, three'
-      }, {
-        id: '1',
-        title: 'Spaghetti',
-        ingredients: 'One, two, three'
-      }, {
-        id: '1',
-        title: 'Spaghetti',
-        ingredients: 'One, two, three'
-      }]
+      tableData: []
     }
+  },
+  mounted() {
+    axios
+      .get("http://localhost:3000/recipes")
+      .then(response => {
+        const data = response.data.slice();
+        this.tableData = collectData(data);
+      });
   }
 }
 </script>
